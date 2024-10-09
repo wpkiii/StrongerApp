@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    margin: 0;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    gap: 10px;
+}
+
+.sound-button {
+    width: 150px;
+    height: 60px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Button Colors */
+.sound-button:nth-child(1),
+.sound-button:nth-child(2),
+.sound-button:nth-child(15),
+.sound-button:nth-child(16) {
+    background-color: red;
+}
+
+.sound-button:nth-child(3),
+.sound-button:nth-child(4) {
+    background-color: purple;
+}
+
+.sound-button:nth-child(5),
+.sound-button:nth-child(6),
+.sound-button:nth-child(7),
+.sound-button:nth-child(8) {
+    background-color: blue;
+}
+
+.sound-button:nth-child(9),
+.sound-button:nth-child(10) {
+    background-color: green;
+}
+
+.sound-button:nth-child(11),
+.sound-button:nth-child(12) {
+    background-color: yellow;
+    color: black; /* Better contrast for yellow */
+}
+
+.sound-button:nth-child(13),
+.sound-button:nth-child(14) {
+    background-color: gold;
+    color: black; /* Better contrast for gold */
+}
+
+/* Flash effect when button is pressed */
+.sound-button:active {
+    animation: flash 0.2s;
+}
+
+@keyframes flash {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); opacity: 0.7; }
+    100% { transform: scale(1); }
+}
