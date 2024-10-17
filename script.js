@@ -4,7 +4,7 @@ const audioElements = {};
 // Preload the audio files when the page loads
 document.querySelectorAll('.sound-button').forEach(button => {
     const soundName = button.getAttribute('data-sound');
-    const audio = new Audio(`sounds/${soundName}.mp3`);
+    const audio = new Audio(`sounds2/${soundName}.mp3`);
     audioElements[soundName] = audio;
 });
 
